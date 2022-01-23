@@ -64,9 +64,9 @@ export default {
     blueLigth: '#6933FF',
     green: '#33CC95',
     red: '#E62E4D',
-    shapPrincipal: '#FFFFFF',
-    titulos: '#363F5F',
-    textos: '#969CB2',
+    shap: '#FFFFFF',
+    title: '#363F5F',
+    text: '#969CB2',
     background: '#E5E5E5',
 
     blackSemiDark: '#A8A8B3',

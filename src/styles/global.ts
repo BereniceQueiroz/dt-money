@@ -1,37 +1,62 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-export default createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
-    @media (max-width: 1080px) {
-      font-size: 93.75%
-    }
-    @media (max-width: 720px) {
-      font-size: 87.5%
-    }
-  }
+    ${({ theme }) => css`
+      body,
+      html,
+      #root {
+        @media (max-width: 1080px) {
+          font-size: 93.75%
+        }
+        @media (max-width: 720px) {
+          font-size: 87.5%
+        }
+      }
 
-  body {
-    background: ##E5E5E5;
-    -webkit-font-smooting: antialiased;
-  }
+      #root {
+        /* max-width: 76.25rem; */
+        margin: 0 auto;
+      }
 
-  body, input, button {
-    font-family: 'Poppins', serif;
-    font-weight: 400;
-  }
+      body {
+        font-family: ${theme.font.family};
+        color: ${theme.colors.text};
+        background: ${theme.colors.background};
+      }
 
-  h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 500;
-  }
+      button {
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+      }
 
-  button {
-    cursor: pointer;
-  }
-`;
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+      }
+
+      input,
+      textarea {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      }
+    `}
+  `;
+
+export default GlobalStyles;
