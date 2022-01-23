@@ -2,15 +2,15 @@
 export default {
   borderRadius: {
     borderRadiusNone: '0',
-    borderRadiusSM: '6px',
-    borderRadiusMD: '12px',
+    borderRadiusSM: '5px',
+    borderRadiusMD: '10px',
     borderRadiusLG: '18px',
     borderRadiusXL: '24px',
     borderRadiusCircle: '50%',
   },
   font: {
     family:
-      "Roboto Slab, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     fontWeightLight: '300',
     fontWeightRegular: '400',
     fontWeightSemiBold: '500',
@@ -61,11 +61,14 @@ export default {
   },
   colors: {
     blue: '#5429CC',
+    blueLigth: '#6933FF',
     green: '#33CC95',
     red: '#E62E4D',
-    blueLigth: '#6933FF',
-    black: '#363F5F',
-    blackLigth: '#969CB2',
+    shapPrincipal: '#FFFFFF',
+    titulos: '#363F5F',
+    textos: '#969CB2',
+    background: '#E5E5E5',
+
     blackSemiDark: '#A8A8B3',
     blackDark: '#D7D7D7',
     white: '#fff',

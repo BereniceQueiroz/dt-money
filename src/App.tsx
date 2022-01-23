@@ -1,11 +1,15 @@
 import React from 'react';
 import GlobalStyle from 'styles/global';
-import SignIn from 'pages/SignIn';
+import Header from 'components/Header';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
 
 const App: React.FC = () => (
   <>
-    <SignIn />
-    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <Header />
+      <GlobalStyle />
+    </ThemeProvider>
   </>
 );
 
