@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-bind */
-import Modal from 'react-modal';
-import { components } from 'assets';
 import { FormEvent, useState } from 'react';
-import { api } from 'service/api';
+import Modal from 'react-modal';
+import { useTransactions } from 'hooks/useTransactions';
+import { components } from 'assets';
 import * as S from './styles';
 
 Modal.setAppElement('#root');
@@ -16,22 +16,27 @@ function NewTransactionModal({
   isOpen,
   onRequestClose,
 }: NewTransactionModalProps) {
+  const { createTransaction } = useTransactions();
   const [title, setTitle] = useState('');
-  const [value, setValue] = useState(0);
+  const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState('');
   const [type, setType] = useState('deposit');
 
-  function handleCreateNewTransaction(e: FormEvent) {
+  async function handleCreateNewTransaction(e: FormEvent) {
     e.preventDefault();
 
-    const data = {
+    await createTransaction({
       title,
-      value,
+      amount,
       category,
       type,
-    };
+    });
 
-    api.post('/transactions', data);
+    setTitle('');
+    setAmount(0);
+    setCategory('');
+    setType('deposit');
+    onRequestClose();
   }
 
   return (
@@ -54,8 +59,8 @@ function NewTransactionModal({
         <S.Input
           type="number"
           placeholder="Valor"
-          value={value}
-          onChange={e => setValue(Number(e.target.value))}
+          value={amount}
+          onChange={e => setAmount(Number(e.target.value))}
         />
         <S.Content>
           <S.RadioBox
