@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.header`
   ${({ theme }) => css`
     background-color: ${theme.colors.blue};
-    /* max-width: 1120px; */
     width: 100%;
   `}
 `;

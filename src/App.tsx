@@ -1,18 +1,16 @@
 import React from 'react';
 import GlobalStyle from 'styles/global';
 import { ThemeProvider } from 'styled-components';
-import Header from 'components/Header';
-import Dashboard from 'components/Dashboard';
-import theme from './styles/theme';
+import theme from 'styles/theme';
+import Router from './router';
 
-const App: React.FC = () => (
-  <>
+function App() {
+  return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Dashboard />
+      <Router />
       <GlobalStyle />
     </ThemeProvider>
-  </>
-);
+  );
+}
 
 export default App;

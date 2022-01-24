@@ -50,11 +50,35 @@ const GlobalStyles = createGlobalStyle`
       }
 
       input,
-      textarea {
+      textarea,
+      form, button {
+        font-family: ${theme.font.family};
         border: none;
         background-color: transparent;
         cursor: pointer;
       }
+      }
+
+      &.react-modal-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.react-modal-content {
+        width: 100%;
+        max-width: 576px;
+        background: ${theme.colors.background};
+        padding: 3rem;
+        position: relative;
+        border-radius: ${theme.borderRadius.borderRadiusSM};
       }
     `}
   `;

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   margin-top: 4rem;
+  width: 100%;
 `;
 
 export const Table = styled.table`

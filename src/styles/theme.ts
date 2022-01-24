@@ -68,13 +68,10 @@ export default {
     title: '#363F5F',
     text: '#969CB2',
     background: '#E5E5E5',
-
+    grey: '#e7e9ee',
+    greyLigth: '#D7D7D7',
     blackSemiDark: '#A8A8B3',
-    blackDark: '#D7D7D7',
-    white: '#fff',
-    grey: '#E5E5E5',
-    greyLigth: '#F0F2F5',
-    greyDark: '#E7E9EE',
+    greyDark: '#969CB3',
   },
   spacings: {
     xxsmall: '0.8rem',
